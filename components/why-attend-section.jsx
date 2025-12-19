@@ -47,11 +47,15 @@ export function WhyAttendSection() {
               key={index}
               className="group border-2 border-primary/10 bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
             >
-              <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="flex gap-4 items-center">
+                <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
+                  <feature.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-card-foreground">{feature.title}</h3>
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-card-foreground">{feature.title}</h3>
+
               <p className="text-muted-foreground">{feature.description}</p>
+
             </Card>
           ))}
         </div>

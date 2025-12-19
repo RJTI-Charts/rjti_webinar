@@ -6,6 +6,7 @@ import { Calendar, Clock, User } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function WebinarDetailsSection() {
+
   const [timeLeft, setTimeLeft] = useState({
     days: 5,
     hours: 12,
@@ -34,9 +35,13 @@ export function WebinarDetailsSection() {
 
   return (
     <section className="bg-background px-4 py-20">
+
       <div className="container mx-auto max-w-5xl">
+
         <Card className="overflow-hidden border-2 border-primary/10 bg-card shadow-lg">
+
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-8 md:p-12">
+          
             <div className="mb-8 text-center">
               <h2 className="mb-3 text-3xl font-bold text-card-foreground md:text-4xl">
                 Structured Market Analysis Webinar

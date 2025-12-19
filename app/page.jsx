@@ -11,17 +11,20 @@ import { Footer } from "@/components/footer-section"
 
 export default function WebinarLandingPage() {
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <WebinarDetailsSection />
-      <WhyAttendSection />
-      <WhatYouLearnSection />
-      <MentorSection />
-      <CommunitySection />
-      <PricingSection />
-      <TestimonialsSection />
-      <DisclaimerSection />
-      <Footer />
-    </main>
+    <>
+      {/* Header Here */}
+      <main className="min-h-screen">
+        <HeroSection />
+        <WebinarDetailsSection />
+        <WhyAttendSection />
+        <WhatYouLearnSection />
+        <MentorSection />
+        <CommunitySection />
+        <PricingSection />
+        <TestimonialsSection />
+        <DisclaimerSection />
+        <Footer />
+      </main>
+    </>
   )
 }

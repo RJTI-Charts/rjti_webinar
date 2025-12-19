@@ -41,10 +41,13 @@ export function CommunitySection() {
               key={index}
               className="border-2 border-primary/10 bg-card p-6 text-center transition-all hover:border-primary/30 hover:shadow-lg"
             >
-              <div className="mb-4 inline-flex rounded-full bg-primary/10 p-4">
-                <channel.icon className="h-8 w-8 text-primary" />
+              <div className="flex gap-4 items-center">
+                <div className="mb-4 inline-flex rounded-full bg-primary/10 p-4">
+                  <channel.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-card-foreground">{channel.name}</h3>
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-card-foreground">{channel.name}</h3>
+
               <p className="mb-3 text-sm text-muted-foreground">{channel.description}</p>
               <p className="text-xs font-medium text-primary">{channel.members}</p>
             </Card>
