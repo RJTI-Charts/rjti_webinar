@@ -28,7 +28,7 @@ const Header = () => {
                 {/* CTA */}
                 <Button
                     size="sm"
-                    className="gap-2 bg-[#7AAB24] px-5 font-semibold shadow-md transition hover:scale-[1.02] hover:bg-[#6e9c1f]"
+                    className="gap-2 bg-[#EB7400] px-5 font-semibold shadow-md transition hover:scale-[1.02] hover:bg-[#6e9c1f]"
                     onClick={() => router.push("/register")}
                 >
                     Reserve Seat
