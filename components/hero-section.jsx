@@ -1,11 +1,19 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function HeroSection() {
+
+  const router = useRouter();
+
   return (
-    <section className="relative bg-[#033220] px-4 py-20 md:py-32">
+    <section className="relative bg-[#033220] px-4 py-20 md:py-32 h-screen">
+
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      <div className="container mx-auto max-w-6xl">
+
+      <div className="container my-auto mx-auto max-w-6xl h-full flex items-center justify-center">
+
         <div className="flex flex-col items-center text-center">
           {/* Trust Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/5 px-4 py-2 text-sm text-gray-200 backdrop-blur">
@@ -29,28 +37,37 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 sm:flex-row">
+
             <Button
               size="lg"
-              className="bg-[#7AAB24] text-primary-foreground hover:bg-primary/99 gap-2 px-8 text-base font-semibold shadow-lg"
+              className="bg-[#7AAB24] text-primary-foreground hover:bg-primary/99 gap-2 px-8 text-base font-semibold shadow-lg duration-300 cursor-pointer"
+              onClick={() => {
+                router.push("/register");
+              }}
             >
               Reserve Your Seat
               <ArrowRight className="h-5 w-5" />
             </Button>
+
             <Button
               size="lg"
               variant="outline"
               className="gap-2 px-8 text-white font-semibold bg-transparent"
+              onClick={() => {
+                router.push("/#webinar-details");
+              }}
             >
               <Play className="h-5 w-5" />
               View Webinar Details
             </Button>
+
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-white">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-[#A8D947]" />
-              100% Free
+              Premium Webinar
             </div>
 
             <div className="flex items-center gap-2">
@@ -63,8 +80,11 @@ export function HeroSection() {
               Live Q&A Session
             </div>
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }

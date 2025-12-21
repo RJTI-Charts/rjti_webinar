@@ -8,19 +8,23 @@ import { PricingSection } from "@/components/pricing-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { DisclaimerSection } from "@/components/disclaimer-section"
 import { Footer } from "@/components/footer-section"
+import Header from "@/components/Header"
+import VideoSection from "@/components/video-section"
 
 export default function WebinarLandingPage() {
   return (
     <>
       {/* Header Here */}
       <main className="min-h-screen">
+        <Header />
         <HeroSection />
         <WebinarDetailsSection />
         <WhyAttendSection />
         <WhatYouLearnSection />
         <MentorSection />
         <CommunitySection />
-        <PricingSection />
+        <VideoSection />
+        {/* <PricingSection /> */}
         <TestimonialsSection />
         <DisclaimerSection />
         <Footer />

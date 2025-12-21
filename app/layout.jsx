@@ -17,10 +17,9 @@ const _abrilFatface = V0_Font_Abril_Fatface({ subsets: ["latin"], weight: ["400"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "RJTI Charts - Master Data-Driven Trading | Free Webinar",
+  title: "RJTI Charts - Master Data-Driven Trading | Premium Webinar",
   description:
-    "Join our live webinar and learn data-driven market insights, trend identification, and risk management strategies. Free educational trading webinar.",
-  generator: "v0.app",
+    "Join our live webinar and learn data-driven market insights, trend identification, and risk management strategies. Premium educational trading webinar.",
   icons: {
     icon: [
       {
