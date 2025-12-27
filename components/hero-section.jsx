@@ -27,6 +27,18 @@ export function HeroSection() {
         />
       </div>
 
+      {/* Decorative Bottom Right Image */}
+      <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden xl:block">
+        <Image
+          src="/bull.png"
+          alt=""
+          width={520}
+          height={520}
+          className="opacity-30 select-none"
+          priority
+        />
+      </div>
+
       <div className="container z-10 my-auto mx-auto max-w-6xl h-full flex items-center justify-center">
 
         <div className="flex flex-col items-center text-center">
@@ -81,17 +93,17 @@ export function HeroSection() {
           {/* Trust Indicators */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-white">
             <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[##00A977]" />
+              <CheckCircle className="h-5 w-5 text-[#00A977]" />
               Premium Webinar
             </div>
 
             <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[##00A977]" />
+              <CheckCircle className="h-5 w-5 text-[#00A977]" />
               Educational Purpose
             </div>
 
             <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[##00A977]" />
+              <CheckCircle className="h-5 w-5 text-[#00A977]" />
               Live Q&A Session
             </div>
           </div>

@@ -101,17 +101,17 @@ export function WebinarDetailsSection() {
                 : (
                   <>
                     <InfoItem
-                      icon={<User className="h-6 w-6 text-primary" />}
+                      icon={<User className="h-6 w-6 text-[#00A977]" />}
                       label="Hosted by"
                       value="John Johnson"
                     />
                     <InfoItem
-                      icon={<Calendar className="h-6 w-6 text-primary" />}
+                      icon={<Calendar className="h-6 w-6 text-[#00A977]" />}
                       label="Date"
                       value={new Date(webinarDetails.startAt).toDateString()}
                     />
                     <InfoItem
-                      icon={<Clock className="h-6 w-6 text-primary" />}
+                      icon={<Clock className="h-6 w-6 text-[#00A977]" />}
                       label="Duration"
                       value="1 hour"
                     />
@@ -129,7 +129,7 @@ export function WebinarDetailsSection() {
                 <div className="grid grid-cols-4 gap-4">
                   {["days", "hours", "minutes", "seconds"].map((key) => (
                     <div key={key} className="rounded-lg bg-card p-4 text-center">
-                      <div className="mb-1 text-3xl font-bold text-primary md:text-4xl">
+                      <div className="mb-1 text-3xl font-bold text-[#00A977] md:text-4xl">
                         {String(timeLeft[key]).padStart(2, "0")}
                       </div>
                       <div className="text-xs capitalize text-muted-foreground">
@@ -149,7 +149,7 @@ export function WebinarDetailsSection() {
                 onClick={() => {
                   router.push("/register");
                 }}
-                className="w-full bg-[#033220] font-semibold md:w-auto md:px-12 cursor-pointer duration-300"
+                className="w-full bg-[#00A977] font-semibold md:w-auto md:px-12 cursor-pointer duration-300"
               >
                 {timeLeft?.isLive ? "Join Live Webinar" : "Register Now"}
               </Button>

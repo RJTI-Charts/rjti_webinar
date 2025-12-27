@@ -49,7 +49,7 @@ export function WhyAttendSection() {
             >
               <div className="flex gap-4 items-center">
                 <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 transition-colors group-hover:bg-primary/20">
-                  <feature.icon className="h-6 w-6 text-primary" />
+                  <feature.icon className="h-6 w-6 text-[#00A977]" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-card-foreground">{feature.title}</h3>
               </div>

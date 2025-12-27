@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-[#033220] px-4 py-12">
+    <footer className="bg-gradient-to-br from-[#05071C] to-[#0F2A45] px-4 py-12">
 
       <div className="container mx-auto max-w-6xl">
 

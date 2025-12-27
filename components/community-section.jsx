@@ -1,18 +1,28 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { MessageCircle, Send, Mail } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
+import { PiTelegramLogo } from "react-icons/pi";
+import { RxDiscordLogo } from "react-icons/rx";
+
 
 const communityChannels = [
   {
-    icon: MessageCircle,
+    icon: FaWhatsapp,
     name: "WhatsApp Community",
     description: "Daily market insights and group discussions",
     link: "https://chat.whatsapp.com/JsCbWEdx8fbAnMdw6tBqtU"
   },
   {
-    icon: Send,
+    icon: PiTelegramLogo,
     name: "Telegram Channel",
     description: "Real-time updates and educational content",
+    link: "https://t.me/+3tYS_UETNT0xMzk1"
+  },
+    {
+    icon: RxDiscordLogo,
+    name: "Discord Channel",
+    description: "Real-time updates and event notifications",
     link: "https://t.me/+3tYS_UETNT0xMzk1"
   },
   // {
