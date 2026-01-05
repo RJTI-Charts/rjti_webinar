@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import EmailHandlers from "../lib/emailTemplates/emailHandlers.js";
 
 const webinarOrderSchema = new mongoose.Schema(
     {
@@ -73,6 +74,27 @@ const webinarOrderSchema = new mongoose.Schema(
     },
     { timestamps: true }
 );
+
+webinarOrderSchema.post("save", async function (doc) {
+
+    //send email once paymentstatus is completed
+    if (doc.paymentStatus === "COMPLETED") {
+
+        const newEmail = new EmailHandlers({
+            to: doc.email,
+            subject: "Webinar Registration Successful",
+            templateData: {
+                fullName: doc.fullName || "there",
+                infoMsg: `You have successfully registered for the webinar. We look forward to your participation! you will receive further details via email soon.`,
+            }
+        })
+
+        await newEmail.sendEmail();
+
+    }
+
+
+})
 
 export default mongoose.models.WebinarOrder ||
     mongoose.model("WebinarOrder", webinarOrderSchema);
