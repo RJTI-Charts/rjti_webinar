@@ -10,7 +10,7 @@ export function HeroSection() {
   const router = useRouter();
 
   return (
-    
+
     <section className="relative bg-gradient-to-br from-[#05071C] to-[#0F2A45] px-4 py-20 md:py-32 h-screen">
 
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -58,8 +58,7 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p className="mb-20 max-w-2xl text-pretty text-s text-gray-300 md:text-l">
-            Learn structured trading methodologies, risk management frameworks,
-            and disciplined decision-making strategies from industry experts.
+            Leverage a market analysis methodology trusted by professionals since 1984. Join our exclusive webinar to discover how RJTI Charts helps traders accurately analyze trends and make confident, data-driven trading decisions.
           </p>
 
           {/* CTA Buttons */}

@@ -4,30 +4,35 @@ import { BarChart3, TrendingUp, Shield, Brain, Target } from "lucide-react"
 const features = [
   {
     icon: BarChart3,
-    title: "Market Structure Analysis",
-    description: "Understand price action, market phases, and structural patterns that drive trading decisions.",
+    title: "Proven Market Structure Insights",
+    description:
+      "Analyze price action and market structure using proprietary indicators refined through decades of real-world futures, equities, and global market experience.",
   },
   {
     icon: TrendingUp,
-    title: "Trend Identification",
-    description: "Learn systematic approaches to identify, validate, and follow market trends with confidence.",
+    title: "Trend Forecasting Backed by History",
+    description:
+      "Identify and follow market trends using methodologies that have navigated major events—from bull markets and crashes to commodity cycles and global shifts.",
   },
   {
     icon: Shield,
-    title: "Risk Management",
-    description: "Master position sizing, stop-loss strategies, and portfolio protection techniques.",
+    title: "Institutional-Grade Risk Control",
+    description:
+      "Apply disciplined risk management principles shaped by professional trading floors, helping protect capital across volatile market conditions.",
   },
   {
     icon: Brain,
-    title: "Decision-Making Frameworks",
-    description: "Develop disciplined trading psychology and structured decision-making processes.",
+    title: "Experience-Driven Decision Frameworks",
+    description:
+      "Leverage structured decision-making frameworks developed from decades of observing and trading real market behavior—not theory alone.",
   },
   {
     icon: Target,
-    title: "Entry & Exit Strategies",
-    description: "Discover data-backed methodologies for timing market entries and exits effectively.",
+    title: "Precision Entry & Exit Signals",
+    description:
+      "Execute trades with confidence using time-tested entry and exit signals that have successfully identified major tops, bottoms, and turning points.",
   },
-]
+];
 
 export function WhyAttendSection() {
   return (

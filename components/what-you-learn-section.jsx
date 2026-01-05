@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
 
 const learningOutcomes = [
-  "Technical analysis fundamentals and chart pattern recognition",
-  "How to identify support, resistance, and key price levels",
-  "Risk-reward ratio calculation and position sizing principles",
-  "Developing a personalized trading plan and strategy",
-  "Psychology of trading: managing emotions and maintaining discipline",
-  "Using indicators effectively without over-complicating analysis",
-  "Backtesting strategies and learning from historical data",
-  "Real-world case studies of successful and failed trades",
+  "How professional traders approach market analysis using structured methodologies",
+  "An introduction to RJTI Charts and how its proprietary indicators work",
+  "Understanding market trends, cycles, and price behavior at a high level",
+  "How historical market events shape modern trading strategies",
+  "The importance of risk management before entering any trade",
+  "How to avoid common beginner mistakes in technical analysis",
+  "When and why indicators should be used — without overloading charts",
+  "What our full trading and analysis services offer and who they are designed for",
 ]
 
 export function WhatYouLearnSection() {
@@ -17,9 +17,11 @@ export function WhatYouLearnSection() {
     <section className="bg-background px-4 py-20">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">What You Will Learn</h2>
+          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+            What You’ll Take Away
+          </h2>
           <p className="mx-auto max-w-2xl text-pretty text-lg text-muted-foreground">
-            A comprehensive curriculum designed to build your foundation in structured market analysis.
+            A beginner-friendly introduction to our trading philosophy, tools, and professional market approach.
           </p>
         </div>
 
