@@ -2,6 +2,8 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Inter, Geist as V0_Font_Geist, Abril_Fatface as V0_Font_Abril_Fatface } from "next/font/google"
 import { Geist_Mono as V0_Font_Geist_Mono } from "next/font/google"
+import Script from "next/script"
+
 
 // Initialize fonts
 const _geist = V0_Font_Geist({
@@ -42,6 +44,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Ads / Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17855649640"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17855649640');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
         <Analytics />
