@@ -108,7 +108,7 @@ const RegisterPage = () => {
             setSuccess(true);
 
             window.gtag("event", "conversion", {
-                send_to: "AW-17855649640/rAFeCJmcm94bEOiunsJC",
+                send_to: "AW-17855649640/rdCuCOavz94bEOiunsJC",
                 transaction_id: data.orderID,
             });
 
