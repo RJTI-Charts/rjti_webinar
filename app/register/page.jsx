@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const RegisterPage = () => {
-    
+
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -104,7 +104,14 @@ const RegisterPage = () => {
         });
 
         if (res.ok) {
+
             setSuccess(true);
+
+            window.gtag("event", "conversion", {
+                send_to: "AW-17855649640/rAFeCJmcm94bEOiunsJC",
+                transaction_id: data.orderID,
+            });
+
         } else {
             setError("Payment succeeded but order processing failed.");
         }
