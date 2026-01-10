@@ -17,7 +17,7 @@ const VideoSection = () => {
 
                 <iframe
                     className="w-full h-full rounded-xl overflow-hidden aspect-video"
-                    src="https://www.youtube.com/embed/DL4lIhdKhOc?si=y-OcpLpknVfGSTVU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+                    src="https://www.youtube.com/embed/tsHWDKJSiE4?si=EcSOcsnDxGq89Fzt" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
                 </iframe>
 
             </div>
