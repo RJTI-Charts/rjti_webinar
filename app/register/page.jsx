@@ -112,6 +112,19 @@ const RegisterPage = () => {
                 transaction_id: data.orderID,
             });
 
+            // TikTok Purchase event (fires once)
+            window.ttq.track("Purchase", {
+                value: Number(pricing.finalPrice),   // REQUIRED → must be a number
+                currency: "USD",                     // REQUIRED → ISO 4217
+                contents: [
+                    {
+                        content_id: data.orderID,        // UNIQUE per purchase (best for validation)
+                        content_type: "product",
+                        content_name: "RJTI Premium Trading Webinar"
+                    }
+                ]
+            });
+
         } else {
             setError("Payment succeeded but order processing failed.");
         }
