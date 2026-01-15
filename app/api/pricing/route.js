@@ -18,21 +18,21 @@ export async function POST(req) {
     /* --------------------------------------------------
        🇮🇳 INDIA PRICING (DISPLAY INR, PAY USD)
     -------------------------------------------------- */
-    if (country === "IN") {
-        const usdAmount = (webinar.indiaPriceINR / 83).toFixed(2); // approx FX
+    // if (country === "IN") {
+    //     const usdAmount = (webinar.indiaPriceINR / 83).toFixed(2); // approx FX
 
-        return Response.json({
-            displayCurrency: "INR",
-            displayPrice: webinar.indiaPriceINR,
+    //     return Response.json({
+    //         displayCurrency: "INR",
+    //         displayPrice: webinar.indiaPriceINR,
 
-            paypalCurrency: "USD",
-            paypalAmount: usdAmount,
+    //         paypalCurrency: "USD",
+    //         paypalAmount: usdAmount,
 
-            basePrice: webinar.indiaPriceINR,
-            discountType: "INDIA_PRICING",
-            discountValue: null,
-        });
-    }
+    //         basePrice: webinar.indiaPriceINR,
+    //         discountType: "INDIA_PRICING",
+    //         discountValue: null,
+    //     });
+    // }
 
     /* --------------------------------------------------
        🌍 GLOBAL PRICING (USD)
