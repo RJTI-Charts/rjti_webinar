@@ -22,7 +22,7 @@ export default function WebinarLandingPage() {
         <WhyAttendSection />
         <WhatYouLearnSection />
         <MentorSection />
-        <CommunitySection />
+        {/* <CommunitySection /> */}
         <VideoSection />
         {/* <PricingSection /> */}
         <TestimonialsSection />
