@@ -18,10 +18,10 @@ export function HeroSection() {
       {/* Decorative Bottom Right Image */}
       <div className="pointer-events-none absolute bottom-0 right-0 z-0 hidden xl:block">
         <Image
-          src="/hero.png"
+          src="/hero1.png"
           alt=""
-          width={480}
-          height={480}
+          width={400}
+          height={400}
           className="opacity-90 select-none"
           priority
         />
