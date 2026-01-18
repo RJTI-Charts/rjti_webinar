@@ -108,7 +108,7 @@ export function WebinarDetailsSection() {
                     <InfoItem
                       icon={<Calendar className="h-6 w-6 text-[#00A977]" />}
                       label="Date"
-                      value={new Date(webinarDetails.startAt).toDateString()}
+                      value={`${new Date(webinarDetails.startAt).toDateString()} - 6 PM CST`}
                     />
                     <InfoItem
                       icon={<Clock className="h-6 w-6 text-[#00A977]" />}
