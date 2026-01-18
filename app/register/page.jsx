@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const RegisterPage = () => {
-    
+
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -104,7 +104,27 @@ const RegisterPage = () => {
         });
 
         if (res.ok) {
+
             setSuccess(true);
+
+            window.gtag("event", "conversion", {
+                send_to: "AW-17855649640/rdCuCOavz94bEOiunsJC",
+                transaction_id: data.orderID,
+            });
+
+            // TikTok Purchase event (fires once)
+            window.ttq.track("Purchase", {
+                value: Number(pricing.paypalAmount),   // REQUIRED → must be a number
+                currency: pricing.paypalCurrency,                     // REQUIRED → ISO 4217
+                contents: [
+                    {
+                        content_id: data.orderID,        // UNIQUE per purchase (best for validation)
+                        content_type: "product",
+                        content_name: "RJTI Premium Trading Webinar"
+                    }
+                ]
+            });
+
         } else {
             setError("Payment succeeded but order processing failed.");
         }
