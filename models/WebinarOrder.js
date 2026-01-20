@@ -19,7 +19,7 @@ const webinarOrderSchema = new mongoose.Schema(
         income: String,
 
         // 🌍 Context
-        country: { type: String, required: true },
+        country: { type: String },
 
         // 💰 Display pricing
         displayPrice: { type: Number, required: true },

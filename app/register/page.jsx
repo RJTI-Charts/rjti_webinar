@@ -158,7 +158,7 @@ const RegisterPage = () => {
                 </h2>
 
                 {/* USER FIELDS */}
-                {["fullName", "email", "phone", "city"].map((field) => (
+                {["fullName", "email" ].map((field) => (
                     <input
                         key={field}
                         name={field}
@@ -171,7 +171,7 @@ const RegisterPage = () => {
                     />
                 ))}
 
-                <select
+                {/* <select
                     name="occupation"
                     value={formData.occupation}
                     onChange={handleChange}
@@ -199,7 +199,7 @@ const RegisterPage = () => {
                     <option value="20k-50k">$20,000 - $50,000</option>
                     <option value="50k-100k">$50,000 - $100,000</option>
                     <option value="above-100k">Above $100,000</option>
-                </select>
+                </select> */}
 
                 {/* COUPON */}
                 <input
