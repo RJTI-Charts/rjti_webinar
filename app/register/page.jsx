@@ -1,6 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play, CheckCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const RegisterPage = () => {
 
@@ -147,120 +151,151 @@ const RegisterPage = () => {
     }
 
     /* ---------------- UI ---------------- */
+
+
     return (
         <main className="min-h-screen flex items-center justify-center">
-            <form
-                onSubmit={handleSubmit}
-                className="w-full max-w-md p-8 space-y-5 bg-white rounded-lg shadow-md"
-            >
-                <h2 className="text-2xl font-bold text-center text-gray-800">
-                    Webinar Registration
+
+            <div className="bg-white p-8 rounded shadow text-center space-y-3 w-[40%] justify-center items-center flex flex-col">
+
+                <h2 className="text-2xl font-bold text-green-600">
+                    Visit Our Main Website to Get Exclusive Offer🎉
                 </h2>
 
-                {/* USER FIELDS */}
-                {["fullName", "email" ].map((field) => (
-                    <input
-                        key={field}
-                        name={field}
-                        value={formData[field]}
-                        onChange={handleChange}
-                        disabled={pricing !== null}
-                        placeholder={field.replace(/([A-Z])/g, " $1")}
-                        className="w-full px-4 py-2 border rounded-md"
-                        required
-                    />
-                ))}
-
-                {/* <select
-                    name="occupation"
-                    value={formData.occupation}
-                    onChange={handleChange}
-                    disabled={pricing !== null}
-                    className="w-full px-4 py-2 border rounded-md"
-                    required
+                <a
+                    href="https://rjticharts.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="lg"
+                    className="bg-[#00A977] text-primary-foreground hover:bg-[#008a61] px-8 text-base font-semibold shadow-lg duration-300 cursor-pointer flex gap-2 w-max p-4 rounded-xl"
                 >
-                    <option value="">Select Occupation</option>
-                    <option value="student">Student</option>
-                    <option value="employed">Employed</option>
-                    <option value="self-employed">Self-Employed</option>
-                    <option value="unemployed">Unemployed</option>
-                </select>
+                    Go to RJTI Charts
+                    <ArrowRight className="h-5 w-5" />
+                </a>
 
-                <select
-                    name="income"
-                    value={formData.income}
-                    onChange={handleChange}
-                    disabled={pricing !== null}
-                    className="w-full px-4 py-2 border rounded-md"
-                    required
-                >
-                    <option value="">Select Annual Income</option>
-                    <option value="below-20k">Below $20,000</option>
-                    <option value="20k-50k">$20,000 - $50,000</option>
-                    <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value="above-100k">Above $100,000</option>
-                </select> */}
-
-                {/* COUPON */}
-                <input
-                    type="text"
-                    placeholder="Coupon code (optional)"
-                    value={couponCode}
-                    onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
-                    disabled={pricing !== null}
-                    className="w-full px-4 py-2 border rounded-md"
-                />
-
-                {/* ERROR */}
-                {error && <p className="text-sm text-red-500 text-center">{error}</p>}
-
-                {/* PRICE BUTTON */}
-                {!pricing && (
-                    <button
-                        type="submit"
-                        disabled={isLoading}
-                        className="w-full px-4 py-2 text-white bg-primary rounded-md"
-                    >
-                        {isLoading ? "Checking price..." : "Check Price & Continue"}
-                    </button>
-                )}
-
-                {/* PRICE DISPLAY */}
-                {pricing && (
-                    <div className="text-center space-y-2">
-                        <p className="font-semibold">
-                            Final Price: {pricing.displayCurrency} {pricing.displayPrice}
-                        </p>
-                        {pricing.discountType && (
-                            <p className="text-xs text-green-600">
-                                Discount applied ({pricing.discountType})
-                            </p>
-                        )}
-                    </div>
-                )}
-
-                {/* PAYPAL */}
-                {pricing?.paypalCurrency && pricing?.paypalAmount && (
-                    <PayPalScriptProvider
-                        options={{
-                            clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
-                            currency: pricing.paypalCurrency, // ✅ FIXED
-                        }}
-                    >
-                        <PayPalButtons
-                            createOrder={createOrder}
-                            onApprove={onApprove}
-                            style={{ layout: "vertical" }}
-                        />
-                    </PayPalScriptProvider>
-                )}
-
-                <p className="text-xs text-center text-gray-500">
-                    Payments are securely processed via PayPal.
+                <p className="text-gray-600">
+                    Our webinar registration is currently closed till then you can visit our main website to explore exclusive offers and stay updated on upcoming webinars.
                 </p>
-            </form>
+
+            </div>
+
         </main>
-    );
+    )
+
+    // return (
+    //     <main className="min-h-screen flex items-center justify-center">
+    //         <form
+    //             onSubmit={handleSubmit}
+    //             className="w-full max-w-md p-8 space-y-5 bg-white rounded-lg shadow-md"
+    //         >
+    //             <h2 className="text-2xl font-bold text-center text-gray-800">
+    //                 Webinar Registration
+    //             </h2>
+
+    //             {/* USER FIELDS */}
+    //             {["fullName", "email"].map((field) => (
+    //                 <input
+    //                     key={field}
+    //                     name={field}
+    //                     value={formData[field]}
+    //                     onChange={handleChange}
+    //                     disabled={pricing !== null}
+    //                     placeholder={field.replace(/([A-Z])/g, " $1")}
+    //                     className="w-full px-4 py-2 border rounded-md"
+    //                     required
+    //                 />
+    //             ))}
+
+    //             {/* <select
+    //                 name="occupation"
+    //                 value={formData.occupation}
+    //                 onChange={handleChange}
+    //                 disabled={pricing !== null}
+    //                 className="w-full px-4 py-2 border rounded-md"
+    //                 required
+    //             >
+    //                 <option value="">Select Occupation</option>
+    //                 <option value="student">Student</option>
+    //                 <option value="employed">Employed</option>
+    //                 <option value="self-employed">Self-Employed</option>
+    //                 <option value="unemployed">Unemployed</option>
+    //             </select>
+
+    //             <select
+    //                 name="income"
+    //                 value={formData.income}
+    //                 onChange={handleChange}
+    //                 disabled={pricing !== null}
+    //                 className="w-full px-4 py-2 border rounded-md"
+    //                 required
+    //             >
+    //                 <option value="">Select Annual Income</option>
+    //                 <option value="below-20k">Below $20,000</option>
+    //                 <option value="20k-50k">$20,000 - $50,000</option>
+    //                 <option value="50k-100k">$50,000 - $100,000</option>
+    //                 <option value="above-100k">Above $100,000</option>
+    //             </select> */}
+
+    //             {/* COUPON */}
+    //             <input
+    //                 type="text"
+    //                 placeholder="Coupon code (optional)"
+    //                 value={couponCode}
+    //                 onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
+    //                 disabled={pricing !== null}
+    //                 className="w-full px-4 py-2 border rounded-md"
+    //             />
+
+    //             {/* ERROR */}
+    //             {error && <p className="text-sm text-red-500 text-center">{error}</p>}
+
+    //             {/* PRICE BUTTON */}
+    //             {!pricing && (
+    //                 <button
+    //                     type="submit"
+    //                     disabled={isLoading}
+    //                     className="w-full px-4 py-2 text-white bg-primary rounded-md"
+    //                 >
+    //                     {isLoading ? "Checking price..." : "Check Price & Continue"}
+    //                 </button>
+    //             )}
+
+    //             {/* PRICE DISPLAY */}
+    //             {pricing && (
+    //                 <div className="text-center space-y-2">
+    //                     <p className="font-semibold">
+    //                         Final Price: {pricing.displayCurrency} {pricing.displayPrice}
+    //                     </p>
+    //                     {pricing.discountType && (
+    //                         <p className="text-xs text-green-600">
+    //                             Discount applied ({pricing.discountType})
+    //                         </p>
+    //                     )}
+    //                 </div>
+    //             )}
+
+    //             {/* PAYPAL */}
+    //             {pricing?.paypalCurrency && pricing?.paypalAmount && (
+    //                 <PayPalScriptProvider
+    //                     options={{
+    //                         clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
+    //                         currency: pricing.paypalCurrency, // ✅ FIXED
+    //                     }}
+    //                 >
+    //                     <PayPalButtons
+    //                         createOrder={createOrder}
+    //                         onApprove={onApprove}
+    //                         style={{ layout: "vertical" }}
+    //                     />
+    //                 </PayPalScriptProvider>
+    //             )}
+
+    //             <p className="text-xs text-center text-gray-500">
+    //                 Payments are securely processed via PayPal.
+    //             </p>
+    //         </form>
+    //     </main>
+    // );
 };
 
 export default RegisterPage;
